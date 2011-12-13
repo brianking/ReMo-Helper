@@ -1,0 +1,13 @@
+{
+    "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
+    "name": "remo-companion", 
+    "contributors": [
+        "Your Name here"
+    ], 
+    "author": "Brian King", 
+    "description": "Tools for Mozilla Reps", 
+    "version": "0.1", 
+    "fullName": "ReMo Companion", 
+    "id": "jid1-4QxcVDv2lBVyfQ", 
+    "icon": "data/Remo32.png"
+}
