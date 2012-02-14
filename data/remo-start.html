@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ReMo Companion</title>
+    <meta charset="utf-8" />
+    <style>
+body {
+    background: #9E322C;
+    color: #000305;
+    font-size: 87.5%; /* Base font size: 14px */
+    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.429;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    clear: both; margin: 0 auto; width: 800px;
+}
+#banner {
+   padding: 1em 0; 
+}
+a:link {
+    /*text-decoration:  none;*/
+}
+footer {
+    color: #fff;
+}
+footer a:link {
+    color: #000;
+}
+h1 {
+    margin: 0;
+}
+h2 {
+    font-size: 1.2em
+}
+#content > div {
+    background-color: white;
+    -moz-border-radius: 1em;
+    padding: 0.1em 1.5em;
+}
+
+.addonbarhelper  {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    width: 28em;
+}
+
+.addonbarhelper > p {
+    background-color: white;
+    -moz-border-radius: 1em;
+    padding: 0.5em 1em;
+    font-size: small;
+    margin: 0;
+}
+.down-triangle {
+   width: 0;
+   height: 0;
+   border-top: 20px solid white;
+   border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+    margin-left: 25em;
+}
+.olPopupContent {
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+img[id^="OL_Icon"] {
+    cursor: pointer;
+}
+    </style>
+    <script>
+function openAddonsManager() {
+var evt = document.createEvent("Events");
+evt.initEvent("RemoOpenAddonsManager", true, false);
+document.dispatchEvent(evt);
+}
+    </script>
+</head>
+
+<body id="index" class="home">
+    
+    <header id="banner">
+        
+        <h1><img src="Remo64.png" style="vertical-align: middle; padding: 0 0.5em;"/>ReMo Companion <span id="version" style="font-size: 0.5em"/></h1>
+    </header>
+
+    <section id="content">
+        <div>
+
+        <p style="font-weight: bold;">The ReMo Companion provides easy access to tools and documentation for Mozilla Reps.</p>
+
+        <p>
+        The Mozilla Reps program provides a simple framework and specific tools to help volunteer Mozillians become official representatives of Mozilla in their region.
+        Anyone who is passionate and knowledgeable about Mozilla and who is ready to dive deeper into the project can sign-up to the program. The Mozilla Reps program
+        helps push responsibility and authority further outwards, to more Mozillians, making it much easier for volunteers organize and/or attend events, recruit and
+        mentor new contributors, and support their local communities better.
+        </p>
+
+        <p>
+        More...
+        <ul>
+            <li><a target="_blank" href="http://reps-dev.allizom.org/">ReMo Website (Dev)</a></li>
+            <li><a target="_blank" href="https://wiki.mozilla.org/ReMo">ReMo Wiki</a></li>
+        </ul>
+        </p>
+
+        <p>You can uninstall this add-on via the <a href="about:addons" onclick="openAddonsManager(); return false;">Add-ons Manager</a>.</p>
+
+        </div>
+        
+    </section>
+
+    <footer style="text-align: center;">
+        <p>The ReMo Companion is published under the <a target="_blank" href="http://www.mozilla.org/MPL/">Mozilla Public License (MPL)</a>.</p>
+    </footer>
+
+    <div class="addonbarhelper">
+        <p>You can always come back to this page via your <span style="font-weight: bold;"/>Add-on Bar</span>.</p>
+        <div class="down-triangle"> </div>
+    </div>
+
+</body>
+</html>

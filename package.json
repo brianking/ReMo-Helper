@@ -9,5 +9,6 @@
     "version": "0.1", 
     "fullName": "ReMo Companion", 
     "id": "jid1-4QxcVDv2lBVyfQ", 
-    "icon": "data/Remo32.png"
+    "icon": "data/Remo48.png",
+    "icon64": "data/Remo64.png"
 }
