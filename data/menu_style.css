@@ -1,0 +1,56 @@
+<style type="text/css">
+
+.remo-menu{
+border-bottom: 1px solid #bbb8a9;
+}
+
+.remo-menu ul{
+padding: 0;
+margin: 0;
+font: bold 90% default;
+list-style-type: none;
+}
+
+.remo-menu li{
+display: inline;
+margin: 0;
+}
+
+.remo-menu li a{
+padding: 3px 7px;
+text-decoration: none;
+padding-right: 13px;
+color: #982B2B;
+background-color: gray;
+-moz-border-radius-topright: 15px;
+position: relative;
+display: block;
+float: left;
+}
+
+.remo-menu li a:visited{
+color: blue;
+}
+
+.remo-menu li a:hover{
+text-decoration: none;
+background-color: white;
+}
+
+.remo-menu li.selected a{
+color: black;
+z-index: 100;
+top: 1px;
+background-color: white;
+}
+
+.remo-menu li.selected a:hover{
+text-decoration: none;
+}
+
+#content > div {
+            background-color: white;
+            padding: 0.8em 1.5em;
+        }
+
+</style>

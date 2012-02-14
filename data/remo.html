@@ -4,6 +4,7 @@
     <title>ReMo Companion</title>
     <meta charset="utf-8" />
     <style>
+        @import url(menu_style.css);
         body {
             color: #000305;
             font-size: 87.5%; /* Base font size: 14px */
@@ -12,15 +13,10 @@
             margin: 0;
             padding: 0;
             text-align: left;
-            clear: both; margin: 0 auto; width: 400px;
+            clear: both; margin: 0 auto; width: 393px;
             background-color: #9E322C;
         }
         h2 {font-size: 1.2em}
-        #content > div {
-            background-color: white;
-            -moz-border-radius: 1em;
-            padding: 0.8em 1.5em;
-        }
     </style>
     <script>
     
@@ -32,6 +28,17 @@
     <header id="banner">
         
         <h1><img src="Remo64.png" style="vertical-align: middle; padding: 0 0.5em;"/>Remo Companion</h1>
+
+        <div class="remo-menu">
+          <ul>
+            <li><a href="#" title="Items">Items</a></li>
+            <li><a href="#" title="Tweet Feed View">Tweet Feed View</a></li>
+            <li><a href="#" title="Events">Events</a></li>
+            <li><a href="#" title="Monthly Report">Monthly Report</a></li>
+          </ul>
+          <br style="clear: left" />
+       </div>
+
     </header>
 
     <section id="content">
