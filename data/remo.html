@@ -4,19 +4,8 @@
     <title>ReMo Companion</title>
     <meta charset="utf-8" />
     <style>
-        @import url(menu_style.css);
-        body {
-            color: #000305;
-            font-size: 87.5%; /* Base font size: 14px */
-            font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            line-height: 1.429;
-            margin: 0;
-            padding: 0;
-            text-align: left;
-            clear: both; margin: 0 auto; width: 393px;
-            background-color: #9E322C;
-        }
-        h2 {font-size: 1.2em}
+        @import url(foundation/stylesheets/foundation.css);
+        @import url(foundation/stylesheets/app.css);
     </style>
     <script>
     
@@ -29,6 +18,7 @@
         
         <h1><img src="Remo64.png" style="vertical-align: middle; padding: 0 0.5em;"/>Remo Companion</h1>
 
+        <!--
         <div class="remo-menu">
           <ul>
             <li><a href="#" title="Items">Items</a></li>
@@ -38,10 +28,24 @@
           </ul>
           <br style="clear: left" />
        </div>
+        -->
 
     </header>
 
-    <section id="content">
+    <dl class="tabs contained">
+      <dd><a href="#simpleContained1" class="active">Items</a></dd>
+      <dd><a href="#simpleContained2">Tweet Feed View</a></dd>
+      <dd><a href="#simpleContained3">Events</a></dd>
+      <dd><a href="#simpleContained4">Monthly Report</a></dd>
+      <dd><a href="#simpleContained5">About</a></dd>
+    </dl>
+
+    <ul class="tabs-content contained">
+      <li class="active" id="simpleContained1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
+      <li id="simpleContained2Tab">This is simple tab 2's content. Now you see it!</li>
+      <li id="simpleContained3Tab">This is simple tab 2's content. Now you see it!</li>
+      <li id="simpleContained4Tab">This is simple tab 2's content. Now you see it!</li>
+      <li id="simpleContained5Tab">
         <div>
 
         <h3>About this Add-on</h3>
@@ -54,6 +58,11 @@
         mentor new contributors, and support their local communities better. </p>
 
         </div>
+      </li>
+    </ul>
+
+    <section id="content">
+
         
     </section>
 
