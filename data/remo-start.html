@@ -1,124 +1,163 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <title>ReMo Companion</title>
-    <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+    <title>
+      Mozilla Reps Helper
+    </title>
+
     <style>
-body {
-    background: #9E322C;
-    color: #000305;
-    font-size: 87.5%; /* Base font size: 14px */
-    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 1.429;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    clear: both; margin: 0 auto; width: 800px;
-}
-#banner {
-   padding: 1em 0; 
-}
-a:link {
-    /*text-decoration:  none;*/
-}
-footer {
-    color: #fff;
-}
-footer a:link {
-    color: #000;
-}
-h1 {
-    margin: 0;
-}
-h2 {
-    font-size: 1.2em
-}
-#content > div {
-    background-color: white;
-    -moz-border-radius: 1em;
-    padding: 0.1em 1.5em;
-}
+        @import url(foundation/stylesheets/foundation.css);
+        @import url(foundation/stylesheets/app.css);
 
-.addonbarhelper  {
-    position: fixed;
-    right: 1em;
-    bottom: 1em;
-    width: 28em;
-}
+        .addonbarhelper  {
+            position: fixed;
+            right: 1em;
+            bottom: 1em;
+            width: 28em;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -moz-transition:box-shadow .1s ease-in;
+        }
 
-.addonbarhelper > p {
-    background-color: white;
-    -moz-border-radius: 1em;
-    padding: 0.5em 1em;
-    font-size: small;
-    margin: 0;
-}
-.down-triangle {
-   width: 0;
-   height: 0;
-   border-top: 20px solid white;
-   border-left: 10px solid transparent;
-   border-right: 10px solid transparent;
-    margin-left: 25em;
-}
-.olPopupContent {
-    padding-left: 0.5em;
-    padding-top: 0.5em;
-}
-img[id^="OL_Icon"] {
-    cursor: pointer;
-}
+        .addonbarhelper > p {
+            background: #efefef;
+            background: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+            -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+            padding: 0.5em 1em;
+            font-size: small;
+            margin: 0;
+        }
+
+        .addonbarhelper > p:hover {
+            -moz-transition:box-shadow .1s ease-out;
+            -moz-box-shadow: 0 2px 5px gray;
+        }
+
+        .down-triangle {
+           width: 0;
+           height: 0;
+           border-top: 20px solid rgba(0,0,0,0.25);
+           border-left: 10px solid transparent;
+           border-right: 10px solid transparent;
+           margin-left: 25em;
+        }
+
+        #footer-logo {
+            margin-top: 20px;
+            width: 100px;
+            margin: 0 auto;
+        }
     </style>
+
     <script>
-function openAddonsManager() {
-var evt = document.createEvent("Events");
-evt.initEvent("RemoOpenAddonsManager", true, false);
-document.dispatchEvent(evt);
-}
+        function openAddonsManager() {
+            var evt = document.createEvent("Events");
+            evt.initEvent("RemoOpenAddonsManager", true, false);
+            document.dispatchEvent(evt);
+        }
     </script>
+
 </head>
 
-<body id="index" class="home">
+<body>
     
-    <header id="banner">
-        
-        <h1><img src="Remo64.png" style="vertical-align: middle; padding: 0 0.5em;"/>ReMo Companion <span id="version" style="font-size: 0.5em"/></h1>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <header class="row">
+            <div class="twelve columns">
 
-    <section id="content">
-        <div>
+            <!-- Logo & Navigation -->
+            <div class="row">
 
-        <p style="font-weight: bold;">The ReMo Companion provides easy access to tools and documentation for Mozilla Reps.</p>
+              <!-- Logo and Wordmark -->
+              <div class="four columns" id="logo-box">
+                <div class="row hide-on-phones">
+                  <a href="/">
+                    <img src="Remo64.png"
+                         alt="Mozilla Reps logo">
+                    <h3>mozilla reps helper</h3>
+                  </a>
+                </div>
+                <div class="row show-on-phones">
+                  <h2>mozilla reps helper mobile</h2>
+                </div>
+              </div>
+            </div>
 
-        <p>
-        The Mozilla Reps program provides a simple framework and specific tools to help volunteer Mozillians become official representatives of Mozilla in their region.
-        Anyone who is passionate and knowledgeable about Mozilla and who is ready to dive deeper into the project can sign-up to the program. The Mozilla Reps program
-        helps push responsibility and authority further outwards, to more Mozillians, making it much easier for volunteers organize and/or attend events, recruit and
-        mentor new contributors, and support their local communities better.
-        </p>
+            </div>
+        </header>
 
-        <p>
-        More...
-        <ul>
-            <li><a target="_blank" href="http://reps.mozilla.org/">ReMo Website</a></li>
-            <li><a target="_blank" href="https://wiki.mozilla.org/ReMo">ReMo Wiki</a></li>
-        </ul>
-        </p>
+        <!-- Separator -->
+        <div class="row">
+          <hr>
+        </div>
 
-        <p>You can uninstall this add-on via the <a href="about:addons" onclick="openAddonsManager(); return false;">Add-ons Manager</a>.</p>
+        <!-- Main content section -->
+        <div class="row">
+            <div class="twelve columns main-section">
+
+                <div id="about">
+                    <h5>
+                        about:reps
+                    </h5>
+                    <br>
+                    <p style="font-weight: bold;">
+                        The ReMo Companion provides easy access to tools and documentation for Mozilla Reps.
+                    </p>
+                    <p>
+                        The Mozilla Reps program aims to empower and support volunteer
+                        Mozillians who want to become official representatives of
+                        Mozilla in their region/locale.
+                    </p>
+                    <p>
+                        The program provides a simple framework and a specific set of
+                        tools to help Mozillians to organize and/or attend events,
+                        recruit and mentor new contributors, document and share
+                        activities, and support their local communities better.
+                    </p>
+                    <p>
+                        More...
+                        <ul class="disc">
+                            <li><a target="_blank" href="http://reps.mozilla.org/">Mozilla Reps Website</a></li>
+                            <li><a target="_blank" href="https://wiki.mozilla.org/ReMo">Mozilla Reps Wiki</a></li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        You can uninstall this add-on via the <a href="about:addons" onclick="openAddonsManager(); return false;">Add-ons Manager</a>.
+                    </p>
+                </div>
+            </div>
 
         </div>
-        
-    </section>
 
-    <footer style="text-align: center;">
-        <p>The ReMo Companion is published under the <a target="_blank" href="http://www.mozilla.org/MPL/">Mozilla Public License (MPL)</a>.</p>
-    </footer>
+    </div> <!-- end container div -->
 
-    <div class="addonbarhelper">
+    <!-- Footer -->
+    <div id="footer" class="hide-on-phones">
+        <div class="row">
+            <hr />
+        </div>
+        <div id="footer-contents">
+            <img id="footer-logo" src="remo_avatar.png" alt="Reps Logo gray">
+            <p id="footer-links">
+                The ReMo Companion is published under the <a target="_blank" href="http://www.mozilla.org/MPL/">Mozilla Public License (MPL)</a>.
+                &nbsp;|&nbsp;
+                <span id="version"/>
+            </p>
+        </div>
+    </div>
+
+    <div class="addonbarhelper hide-on-phones">
         <p>You can always come back to this page via your <span style="font-weight: bold;"/>Add-on Bar</span>.</p>
         <div class="down-triangle"> </div>
     </div>
 
 </body>
+
 </html>
