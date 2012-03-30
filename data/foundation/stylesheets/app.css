@@ -38,11 +38,9 @@
 
 @font-face {
     font-family: 'ModernPictogramsNormal';
-    src: url('/media/fonts/modernpics-webfont.eot');
-    src: url('/media/fonts/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/media/fonts/modernpics-webfont.woff') format('woff'),
-         url('/media/fonts/modernpics-webfont.ttf') format('truetype'),
-         url('/media/fonts/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    src: url('../../media/fonts/modernpics-webfont.eot');
+    src: url('../../media/fonts/modernpics-webfont.ttf') format('truetype'),
+         url('../../media/fonts/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
     font-weight: normal;
     font-style: normal;
 
