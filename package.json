@@ -1,14 +1,15 @@
 {
     "license": "MPL 2.0", 
     "name": "remo-helper", 
+    "fullName": "Mozilla Reps Helper", 
     "contributors": [
         "Vlad Florin Maniac"
     ], 
     "author": "Brian King", 
     "description": "Easy access to tools and documentation for Mozilla Reps", 
     "version": "0.2", 
-    "fullName": "Mozilla Reps Helper", 
     "id": "jid1-4QxcVDv2lBVyfQ", 
     "icon": "data/Remo48.png",
-    "icon64": "data/Remo64.png"
+    "icon64": "data/Remo64.png",
+    "homepage": "https://reps.mozilla.org/"
 }
