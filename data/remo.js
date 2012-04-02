@@ -22,11 +22,14 @@ var parseSOPs = function(sops)
   for (var i=0; i<parseInt(sopCount); i++) {
     var sopItem = document.createElement('li');
     var sopLink = document.createElement('a');
+    var sopIcon = document.createElement('i');
     var sopName = cleanSOPName(items[i].title.mTextform);
     sopLink.href = cleanSOPUrl(items[i].uri);
     sopLink.setAttribute("target", "_blank");
     var liText = document.createTextNode(sopName);
+    sopIcon.className = "icon-large icon-bookmark";
     sopLink.appendChild(liText);
+    sopItem.appendChild(sopIcon);
     sopItem.appendChild(sopLink);
     sopsList.appendChild(sopItem);
   }
