@@ -1,77 +1,66 @@
-/* Foundation v2.2 http://foundation.zurb.com */
+/**
+ * Foundation v2.2 http://foundation.zurb.com
+ */
 jQuery(document).ready(function ($) {
+  // Use this js doc for all application specific JS
+  function activateTab($tab) {
+    var $activeTab = $tab.closest('dl').find('a.active'),
+    contentLocation = $tab.attr("href") + 'Tab';
 
-	/* Use this js doc for all application specific JS */
+    //Make Tab Active
+    $activeTab.removeClass('active');
+    $tab.addClass('active');
 
-	/* TABS --------------------------------- */
-	/* Remove if you don't need :) */
+    //Show Tab Content
+    $(contentLocation).closest('.tabs-content').children('li').hide();
+    $(contentLocation).css('display', 'block');
+  }
 
-	function activateTab($tab) {
-		var $activeTab = $tab.closest('dl').find('a.active'),
-				contentLocation = $tab.attr("href") + 'Tab';
+  // Handle every tab
+  $('dl.tabs').each(function () {
+    //Get all tabs
+    var tabs = $(this).children('dd').children('a');
+      tabs.click(function (e) {
+	activateTab($(this));
+       });
+  });
 
-		//Make Tab Active
-		$activeTab.removeClass('active');
-		$tab.addClass('active');
+  if (window.location.hash) {
+    activateTab($('a[href="' + window.location.hash + '"]'));
+  }
 
-    	//Show Tab Content
-		$(contentLocation).closest('.tabs-content').children('li').hide();
-		$(contentLocation).css('display', 'block');
-	}
-
-	$('dl.tabs').each(function () {
-		//Get all tabs
-		var tabs = $(this).children('dd').children('a');
-		tabs.click(function (e) {
-			activateTab($(this));
-		});
-	});
-
-	if (window.location.hash) {
-		activateTab($('a[href="' + window.location.hash + '"]'));
-	}
-
-	/* ALERT BOXES ------------ */
-	$(".alert-box").delegate("a.close", "click", function(event) {
+  // Handle Alert Boxes
+  $(".alert-box").delegate("a.close", "click", function (event) {
     event.preventDefault();
-	  $(this).closest(".alert-box").fadeOut(function(event){
-	    $(this).remove();
-	  });
-	});
+    $(this).closest(".alert-box").fadeOut(function (event) {
+      $(this).remove();
+    });
+  });
 
 
-	/* PLACEHOLDER FOR FORMS ------------- */
-	/* Remove this and jquery.placeholder.min.js if you don't need :) */
+  // Placeholder for forms
+  $('input, textarea').placeholder();
 
-	$('input, textarea').placeholder();
+  // Tooltips
+  $(this).tooltips();
 
-	/* TOOLTIPS ------------ */
-	$(this).tooltips();
+  // Dropdown nav
+  var lockNavBar = false;
 
+  $('.nav-bar a.flyout-toggle').live('click', function (e) {
+    e.preventDefault();
+    var flyout = $(this).siblings('.flyout');
 
+    if (lockNavBar === false) {
+      $('.nav-bar .flyout').not(flyout).slideUp(500);
+      flyout.slideToggle(500, function () {
+        lockNavBar = false;
+      });
+    }
 
-	/* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
-//	$('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
-//	$('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'left'});
-//	$('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'left'});
-//	$('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
+    lockNavBar = true;
+  });
 
-
-
-	/* DROPDOWN NAV ------------- */
-
-	var lockNavBar = false;
-	$('.nav-bar a.flyout-toggle').live('click', function(e) {
-		e.preventDefault();
-		var flyout = $(this).siblings('.flyout');
-		if (lockNavBar === false) {
-			$('.nav-bar .flyout').not(flyout).slideUp(500);
-			flyout.slideToggle(500, function(){
-				lockNavBar = false;
-			});
-		}
-		lockNavBar = true;
-	});
   if (Modernizr.touch) {
     $('.nav-bar>li.has-flyout>a.main').css({
       'padding-right' : '75px'
@@ -80,9 +69,9 @@ jQuery(document).ready(function ($) {
       'border-left' : '1px dashed #eee'
     });
   } else {
-    $('.nav-bar>li.has-flyout').hover(function() {
+    $('.nav-bar>li.has-flyout').hover(function () {
       $(this).children('.flyout').show();
-    }, function() {
+    }, function () {
       $(this).children('.flyout').hide();
     })
   }
