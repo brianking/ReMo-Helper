@@ -125,7 +125,9 @@ li.last {
 }
 
 li.active {
+    /* Active is not set when another tab is clicked. Disabling
     background: #ddd;
+    */
 }
 
 /* -----------------------------------------
