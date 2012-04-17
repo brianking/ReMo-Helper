@@ -14,8 +14,12 @@
 :: Error Styles
 :: Pictogram Styles
 :: Planet feed Styles
-:: Logo gray Style
-:: Featured rep;
+:: Logo gray Styles
+:: Featured rep Styles
+:: About page Styles
+:: Dashboard Styles
+:: Additions towards 2.2;
+:: Reports Styles
 */
 
 
@@ -48,13 +52,43 @@
 
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.eot');
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.eot');
+    src: url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('//www.mozilla.org/img/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
 
+html {
+    border-top: 2px solid white;
+}
+
+#wrapper {
+    background: rgb(249, 249, 249) url('/media/img/remo/mozorg-gradient.png') repeat-x top center;
+}
+
 body {
-    border-top: 3px solid #686868;
-    background: #eee;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
 }
 
 hr {
@@ -74,6 +108,67 @@ a:hover, a:active{
     transition:color .3s ease-out;
 }
 
+h1, h2, h3, h4, h5, h6, .huge, .large {
+    font-family: 'Open Sans',sans-serif;
+    display: block;
+    font-weight: 300;
+    margin: 0px 0px 12px;
+    line-height: 100%;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+    color: rgb(72, 72, 72);
+}
+
+.huge, .huge h1 {
+    font-size: 108px;
+    letter-spacing: -4px;
+    line-height: 100%;
+}
+
+.large, .large h1 {
+    font-size: 72px;
+    letter-spacing: -3px;
+    line-height: 100%;
+}
+
+h1, .huge h2, .large h2, .billboard h2 {
+    font-size: 48px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+
+h4 {
+    font-size: 24px;
+    letter-spacing: -0.25px;
+}
+
+.required-field {
+    color: #888;
+    font-family: 'ModernPictogramsNormal';
+    font-size: 12px;
+    float: right;
+    margin-bottom: -40px;
+    position: relative;
+    top: -40px;
+}
+
+.required-field:before {
+    content: '\*';
+}
+
+/* Setting tabzilla z-index to 30 so it is displayed below modals */
+#tabzilla {
+    z-index: 30 !important;
+}
+
 /* -----------------------------------------
    Header Styles
 ----------------------------------------- */
@@ -83,9 +178,19 @@ a:hover, a:active{
     margin-top: 10px;
 }
 
+@media only screen and (max-width: 767px) {
+    #login-box {
+        text-align:left;
+    }
+}
+
 #logo-box {
-    font-family: 'MetaNormal';
-    margin-top: 10px;
+    margin-top: 10px !important;
+}
+
+#logo-box h3 {
+    font-family: 'MetaNormal' !important;
+    margin-top: 5px !important;
 }
 
 #logo-box img {
@@ -96,6 +201,7 @@ a:hover, a:active{
 
 #navigation-box .nav-bar {
     float: right !important;
+    font-family: 'Open Sans' !important;
 }
 
 #navigation-box ul {
@@ -124,12 +230,6 @@ li.last {
     border-right:none;
 }
 
-li.active {
-    /* Active is not set when another tab is clicked. Disabling
-    background: #ddd;
-    */
-}
-
 /* -----------------------------------------
    Main Page Styles
 ----------------------------------------- */
@@ -138,8 +238,8 @@ li.active {
     margin-bottom: 40px;
 }
 
-#more-posts {
-    text-align:right;
+.more-posts {
+    text-align: left;
     margin: 20px 0px 40px 0px;
 }
 
@@ -165,6 +265,12 @@ ul.orbit-bullets li {
 
 ul.orbit-bullets li.active {
     background-position: -8px 0 !important;
+}
+
+#planet {
+    height: 80ex;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 /* -----------------------------------------
@@ -241,6 +347,12 @@ ul.orbit-bullets li.active {
 
 #profiles_listview {
     display: none;
+}
+
+.reps-number {
+    color: #888;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* -----------------------------------------
@@ -326,11 +438,22 @@ ul.orbit-bullets li.active {
     margin-bottom: 20px !important;
 }
 
+.more-info {
+    color: #888;
+    font-size: 10px;
+    text-align: right;
+    margin-top: -12px;
+}
+
+.edit-profile-item {
+    margin-top: 20px;
+}
+
 /* -----------------------------------------
    Point Map Styles
 ----------------------------------------- */
 
-.use-those {
+.use-these {
     margin-top: 50px;
     text-align: right;
 }
@@ -344,6 +467,7 @@ ul.orbit-bullets li.active {
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    letter-spacing: 0px;
 }
 
 /* -----------------------------------------
@@ -359,53 +483,49 @@ ul.orbit-bullets li.active {
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    letter-spacing: 0px;
 }
 
 /* -----------------------------------------
    Footer Styles
 ----------------------------------------- */
 
-#footer h3 a:hover,#footer h3 a:active{
-    background:-moz-radial-gradient(center 45deg,ellipse closest-side,rgba(255,255,255,0.3) 0,rgba(255,255,255,0) 100%);
-    -moz-transition:background .2s ease-in-out;
+#colophon {
+    color: #bbb;
+    padding: 48px 0;
+    font-size: 14px;
+    line-height: 18px;
 }
 
-#footer{
-    text-align:center;
-    color: rgb(153, 153, 153);
-    clear: both;
-    padding: 50px 0pt 20px;
+#colophon a {
+        color: rgb(103,167,208);
 }
 
-#footer-contents{
-    width:980px;
-    text-align:left;
-    margin:auto;
+#colophon a:link {
+        color: rgb(103,167,208);
 }
 
-#footer-contents[dir=rtl]{
-    text-align:right;
+#colophon a:visited {
+        color: rgb(103,167,208);
 }
 
-#footer h3 a,#footer h3 a:link,#footer h3 a:visited{
-    display:block;
-    height:40px;
-    width:100px;
-    text-indent:-200px;
-    font-size:1px;
-    overflow:hidden;
+#colophon a:hover {
+        color: rgb(83,147,188);
 }
 
-#footer li li a:link,#footer li li a:visited{
-    color:#669be1;
-    font-family:georgia,serif;
-    font-weight:normal;
-    font-size:13px;
-    text-transform:none;
+#colophon a:active {
+        color: rgb(83,147,188);
 }
 
-#footer li li a:hover,#footer li li a:active{
-    color:#fff;
+
+#colophon nav {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#colophon ul li {
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    margin: 0 0 2px 0;
 }
 
 
@@ -477,6 +597,7 @@ small.error {
     line-height: 24px;
     color: #777;
     text-align: left;
+    font-family: Helvetica,arial,sans-serif;
 }
 
 /* -----------------------------------------
@@ -506,4 +627,189 @@ small.error {
 
 select#id_user {
     display: none;
+}
+
+/* -----------------------------------------
+   About page Styles
+----------------------------------------- */
+
+#about-text ul {
+    list-style-type: circle !important;
+    list-style-position: inside;
+}
+
+#about-text h4 {
+    margin-top: 40px !important;
+}
+#about-navigation li {
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin-top: 20px !important;
+}
+
+#about-navigation nav {
+    margin-bottom: 50px !important;
+}
+
+/* -----------------------------------------
+   Dashboard Styles
+----------------------------------------- */
+
+.dashboard-table {
+    width: 100%;
+}
+
+.dashboard-filter {
+    float: right;
+}
+
+.dashboard-box {
+    margin-top: 20px;
+}
+
+dl.sub-nav dd.active a {
+    background-color: rgb(103, 167, 208);
+    color: #fff;
+    padding: 3px 9px;
+}
+
+dl.sub-nav {
+    margin: 2px;
+    padding: 0 auto;
+}
+
+.no-bugs {
+    color: #888;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.dashboard-mentee {
+    margin: 10px !important;
+    text-align: center;
+    padding: 10px !important;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.dashboard-mentee.notfilled {
+    background: -moz-linear-gradient(top, #da8589 0%, #B50A11 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#da8589), color-stop(100%,#B50A11));
+}
+
+.dashboard-mentee.notfilled h6 {
+    color: white;
+    text-shadow: none;
+}
+
+.dashboard-mentee:hover {
+    -moz-transition:box-shadow .1s ease-out;
+    -webkit-transition:box-shadow .1s ease-out;
+    transition:box-shadow .1s ease-out;
+    box-shadow: 0 2px 5px gray;
+    -webkit-box-shadow: 0 2px 5px gray;
+    -moz-box-shadow: 0 2px 5px gray;
+}
+
+/* -----------------------------------------
+   Additions towards 2.2
+----------------------------------------- */
+
+ul.mreports {
+    display: block;
+    background: #f4f4f4;
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+ul.mreports li {
+    margin: 0;
+    padding: 0 4px 0 0;
+    float: left;
+}
+
+ul.mreports li a, ul.mreports li span {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-left: 4px;
+}
+
+ul.mreports li:first-child a, ul.mreports li:first-child span {
+    padding-left: 0;
+}
+
+ul.mreports li:before {
+    content: "/";
+    color: #aaa;
+}
+
+ul.mreports li:first-child:before {
+    content: "";
+}
+
+ul.mreports li.exists a {
+}
+
+ul.mreports li:hover a, ul.mreports li a:focus {
+    text-decoration: underline;
+}
+
+ul.mreports li.exists:hover a, ul.mreports li.exists a:focus {
+    text-decoration: none;
+}
+
+ul.mreports li.unavailable a {
+    color: #999;
+}
+
+ul.mreports li.unavailable:hover a, ul.pagination li.unavailable a:focus {
+    text-decoration: none;
+    color: #999;
+    cursor: default;
+}
+
+ul.mreports li.editable a {
+    color: #dd4433;
+}
+
+
+/* -----------------------------------------
+   Reports Styles
+----------------------------------------- */
+
+.report-instructions {
+    margin-top: 20px;
+}
+
+.report-box {
+    margin-top: 20px;
+}
+
+.report-item textarea, select, p {
+    margin-top: 20px !important;
+}
+
+.report-comment {
+    margin-top: 20px !important;
+}
+
+.report-delete-comment {
+    background: none;
+    border: none;
+    font-size: 22px;
+    float: right;
+    color: #aaa;
+    text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-delete-comment:hover {
+    color: #888;
+}
+
+.dashboard-action {
+    margin: 5px 0px 20px 0px;
 }
