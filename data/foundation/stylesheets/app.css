@@ -83,7 +83,7 @@ html {
 }
 
 #wrapper {
-    background: rgb(249, 249, 249) url('/media/img/remo/mozorg-gradient.png') repeat-x top center;
+    background: rgb(249, 249, 249) url('../../img/mozorg-gradient.png') repeat-x top center;
 }
 
 body {

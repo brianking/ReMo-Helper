@@ -1,17 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <title>ReMo Companion</title>
-    <meta charset="utf-8" />
+    <title>
+      Mozilla Reps Companion
+    </title>
     <style>
         @import url(FontAwesome/css/font-awesome.css);
         @import url(foundation/stylesheets/foundation.css);
         @import url(foundation/stylesheets/app.css);
-            body,
-            div {
-                margin: 0;
-                padding: 0;
-            }
 
             body {
                 /* Disable scrollbars */
@@ -20,7 +18,15 @@
                 height: 100%;
             }
 
+            p.first {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
             #remo-top {
+                padding: 20px 0 0 0;
+                background: inherit;
+                /* Always on screen */
                 position: absolute;
                 width: 100%;
                 height: 80px;
@@ -31,138 +37,146 @@
                 overflow: auto;
                 position: fixed;
                 width: 100%;
-                top: 80px;
+                top: 100px;
                 bottom: 0;
+                background: inherit;
             }
 
     </style>
-    <script>
-    
-    </script>
 </head>
 
-<body id="index">
-    
-    <div id="remo-top">
+<body>
+    <!-- Wrapper for background -->
+    <div id="wrapper">
 
-      <header id="banner">
+      <div id="remo-top">
 
-          <h2><img src="Remo32.png" style="vertical-align: middle; padding: 0 0.5em;"/>Mozilla Reps Companion</h2>
+        <header id="banner">
 
-      </header>
+            <h2><img src="Remo32.png" style="vertical-align: middle; padding: 0 0.5em;"/>Mozilla Reps Companion</h2>
 
-      <dl class="tabs contained">
-        <dd><a href="#simpleContained1" class="active">Tools</a></dd>
-        <dd><a href="#simpleContained2">Monthly Report</a></dd>
-        <dd><a href="#simpleContained3">SOPs</a></dd>
-        <dd><a href="#simpleContained4">Social</a></dd>
-        <dd><a href="#simpleContained5">About</a></dd>
-      </dl>
+        </header>
 
-    </div>
+        <dl class="tabs contained">
+          <dd><a href="#simpleContained1" class="active">Tools</a></dd>
+          <dd><a href="#simpleContained2">Monthly Report</a></dd>
+          <dd><a href="#simpleContained3">SOPs</a></dd>
+          <dd><a href="#simpleContained4">Social</a></dd>
+          <dd><a href="#simpleContained5">About</a></dd>
+        </dl>
 
-    <div id="remo-main">
+      </div>
 
-      <ul class="tabs-content contained">
-        <li class="active" id="simpleContained1Tab">
-          <div>
-            <ul>
-              <li>
-                <i class="icon-large icon-road"></i>
-                <a target="_blank" href="https://wiki.mozilla.org/Form:Remoevents">Setup or attend an Event</a>
-              </li>
-              <li>
-                <i class="icon-large icon-barcode"></i>
-                <a target="_blank" href="https://bugzilla.mozilla.org/form.reps.budget">Make a Budget request</a>
-              </li>
-              <li>
-                <i class="icon-large icon-shopping-cart"></i>
-                <a target="_blank" href="https://bugzilla.mozilla.org/form.reps.swag">Request Swag</a>
-              </li>
-              <li>
-                <i class="icon-large icon-star"></i>
-                <a target="_blank" href="http://cards.mozillareps.org/">Business card generator</a>
-              </li>
-            </ul>
-            <a target="_blank" href="https://wiki.mozilla.org/ReMo/Tools_and_Resources">More tools and resources...</a>
-          </div>
-        </li>
-        <li id="simpleContained2Tab">
-          <div>
-            <ul>
-              <li>
-                <i class="icon-large icon-pencil"></i>
-                <a target="_blank" href="https://reps.mozilla.org/people/me/currentreport/">Submit a new report</a>
-              </li>
-            </ul>
-            <p>Reporting back on a regular basis is a crucial part of your role as a Mozilla Rep. This involves documenting and sharing all your activities in the past month so that your mentor can see your progress and support you where needed, but also so that the broader community can have full visibility on all the amazing work that you are doing. To this end, a very simple Monthly Report form was developed to enable Mozilla Reps to report back easily, quickly, and efficiently.</p>
-            <a target="_blank" href="https://wiki.mozilla.org/ReMo/SOPs/Monthly_Reports">More about monthly reports...</a>
-          </div>
-        </li>
-        <li id="simpleContained3Tab">
-          <div>
-            <p>
-            A central aim of ReMo is to make it easier for Mozillians to represent Mozilla, but also in a more structured and consistent way, that way the broader community can benefit from their efforts even more.
-            </p>
+      <div id="remo-main">
 
-            <p>
-            The following is a list of SOPs that will be very useful to all Mozilla Reps. <strong>Find your role, what you want to do and go!</strong>
-            </p>
-
-            <ul id="sop-list">
-              <!-- generated SOPs from wiki will go here -->
-            </ul>
-          </div>
-        </li>
-        <li id="simpleContained4Tab">
-          <div class="container">
-            <ul>
-              <li>
-                  <i class="icon-large icon-twitter-sign"></i>
-                  <a target="_blank" href="https://twitter.com/#!/mozillareps">Follow us on Twitter</a>
-              </li>
-              <li>
-                  <i class="icon-large icon-facebook-sign"></i>
-                  <a target="_blank" href="http://www.facebook.com/MozillaReps">Like Mozilla Reps on Facebook</a>
-              </li>
-              <li>
-                  <i class="icon-large icon-comment"></i>
-                  <a target="_blank" href="http://planet.mozillareps.org/">Planet Reps</a> for all the latest news
-              </li>
-              <li>
-                  <i class="icon-large icon-camera"></i>
-                  Tag your pictures <i>#mozreps</i> on <a target="_blank" href="http://www.flickr.com/photos/tags/mozreps/">Flickr</a>, 
-                  <a target="_blank" href="https://picasaweb.google.com/lh/view?q=mozreps/">Picasa</a>, and other photo services.
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li id="simpleContained5Tab">
-          <div>
-
-            <p>The Mozilla Reps Companion provides easy access to tools and documentation for Mozilla Reps.</p>
-
-            <p>
+        <ul class="tabs-content contained">
+          <li class="active" id="simpleContained1Tab">
+            <div>
               <ul>
                 <li>
-                    <i class="icon-large icon-github-sign"></i>
-                    <a target="_blank" href="https://github.com/brianking/ReMo-Helper">Source code on github</a>
+                  <i class="icon-large icon-road"></i>
+                  <a target="_blank" href="https://wiki.mozilla.org/Form:Remoevents">Setup or attend an Event</a>
+                </li>
+                <li>
+                  <i class="icon-large icon-barcode"></i>
+                  <a target="_blank" href="https://bugzilla.mozilla.org/form.reps.budget">Make a Budget request</a>
+                </li>
+                <li>
+                  <i class="icon-large icon-shopping-cart"></i>
+                  <a target="_blank" href="https://bugzilla.mozilla.org/form.reps.swag">Request Swag</a>
+                </li>
+                <li>
+                  <i class="icon-large icon-star"></i>
+                  <a target="_blank" href="http://cards.mozillareps.org/">Business card generator</a>
                 </li>
               </ul>
-            </p>
+              <a target="_blank" href="https://wiki.mozilla.org/ReMo/Tools_and_Resources">More tools and resources...</a>
+            </div>
+          </li>
+          <li id="simpleContained2Tab">
+            <div>
 
-            <p>
-              This Source Code Form is subject to the terms of the Mozilla Public
-              License, v. 2.0. You can obtain one a copy at <a target="_blank" href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>
-              <br/><br/>
-              Some icons via <a target="_blank" href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.
-              <br/><br/>
-              <a target="_blank" href="http://foundation.zurb.com/">Foundation</a> is licensed under the MIT license
-            </p>
+              <ul>
+                <li>
+                  <i class="icon-large icon-pencil"></i>
+                  <a target="_blank" href="https://reps.mozilla.org/people/me/currentreport/">Submit a new report</a>
+                </li>
+              </ul>
+              <p>Reporting back on a regular basis is a crucial part of your role as a Mozilla Rep. This involves documenting and sharing all your activities in the past month so that your mentor can see your progress and support you where needed, but also so that the broader community can have full visibility on all the amazing work that you are doing. To this end, a very simple Monthly Report form was developed to enable Mozilla Reps to report back easily, quickly, and efficiently.</p>
+              <a target="_blank" href="https://wiki.mozilla.org/ReMo/SOPs/Monthly_Reports">More about monthly reports...</a>
 
-          </div>
-        </li>
-      </ul>
+            </div>
+          </li>
+          <li id="simpleContained3Tab">
+            <div>
+
+              <p class="first">
+              A central aim of ReMo is to make it easier for Mozillians to represent Mozilla, but also in a more structured and consistent way, that way the broader community can benefit from their efforts even more.
+              </p>
+
+              <p>
+              The following is a list of SOPs that will be very useful to all Mozilla Reps. <strong>Find your role, what you want to do and go!</strong>
+              </p>
+
+              <ul id="sop-list">
+                <!-- generated SOPs from wiki will go here -->
+              </ul>
+
+            </div>
+          </li>
+          <li id="simpleContained4Tab">
+            <div>
+
+              <ul>
+                <li>
+                    <i class="icon-large icon-twitter-sign"></i>
+                    <a target="_blank" href="https://twitter.com/#!/mozillareps">Follow us on Twitter</a>
+                </li>
+                <li>
+                    <i class="icon-large icon-facebook-sign"></i>
+                    <a target="_blank" href="http://www.facebook.com/MozillaReps">Like Mozilla Reps on Facebook</a>
+                </li>
+                <li>
+                    <i class="icon-large icon-comment"></i>
+                    <a target="_blank" href="http://planet.mozillareps.org/">Planet Reps</a> for all the latest news
+                </li>
+                <li>
+                    <i class="icon-large icon-camera"></i>
+                    Tag your pictures <i>#mozreps</i> on <a target="_blank" href="http://www.flickr.com/photos/tags/mozreps/">Flickr</a>, 
+                    <a target="_blank" href="https://picasaweb.google.com/lh/view?q=mozreps/">Picasa</a>, and other photo services.
+                </li>
+              </ul>
+
+            </div>
+          </li>
+          <li id="simpleContained5Tab">
+            <div>
+
+              <p class="first">The Mozilla Reps Companion provides easy access to tools and documentation for Mozilla Reps.</p>
+
+              <p>
+                <ul>
+                  <li>
+                      <i class="icon-large icon-github-sign"></i>
+                      <a target="_blank" href="https://github.com/brianking/ReMo-Helper">Source code on github</a>
+                  </li>
+                </ul>
+              </p>
+
+              <p>
+                This Source Code Form is subject to the terms of the Mozilla Public
+                License, v. 2.0. You can obtain one a copy at <a target="_blank" href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>
+                <br/><br/>
+                Some icons via <a target="_blank" href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.
+                <br/><br/>
+                <a target="_blank" href="http://foundation.zurb.com/">Foundation</a> is licensed under the MIT license
+              </p>
+
+            </div>
+          </li>
+        </ul>
+
+      </div>
 
     </div>
 

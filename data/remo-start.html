@@ -67,106 +67,111 @@
 
 <body>
     
-    <div class="container">
-        <!-- Header -->
-        <header class="row">
-            <div class="twelve columns">
+    <!-- Wrapper for background -->
+    <div id="wrapper">
 
-            <!-- Logo & Navigation -->
+        <div class="container">
+            <!-- Header -->
+            <header class="row">
+                <div class="twelve columns">
+
+                <!-- Logo & Navigation -->
+                <div class="row">
+
+                  <!-- Logo and Wordmark -->
+                  <div class="four columns" id="logo-box">
+                    <div class="row hide-on-phones">
+                      <a href="/">
+                        <img src="Remo64.png"
+                             alt="Mozilla Reps logo">
+                        <h3>
+                            Mozilla Reps Companion &nbsp;|&nbsp;
+                            <span id="version"/>
+                        </h3>
+                      </a>
+                    </div>
+                    <div class="row show-on-phones">
+                      <h2>Mozilla Reps Companion mobile</h2>
+                    </div>
+                  </div>
+                </div>
+
+                </div>
+            </header>
+
+            <!-- Separator -->
             <div class="row">
-
-              <!-- Logo and Wordmark -->
-              <div class="four columns" id="logo-box">
-                <div class="row hide-on-phones">
-                  <a href="/">
-                    <img src="Remo64.png"
-                         alt="Mozilla Reps logo">
-                    <h3>
-                        Mozilla Reps Companion &nbsp;|&nbsp;
-                        <span id="version"/>
-                    </h3>
-                  </a>
-                </div>
-                <div class="row show-on-phones">
-                  <h2>Mozilla Reps Companion mobile</h2>
-                </div>
-              </div>
+              <hr>
             </div>
 
-            </div>
-        </header>
+            <!-- Main content section -->
+            <div class="row">
+                <div class="twelve columns main-section">
 
-        <!-- Separator -->
-        <div class="row">
-          <hr>
-        </div>
+                    <div id="about">
+                        <h5>
+                            about:reps
+                        </h5>
+                        <br>
+                        <p style="font-weight: bold;">
+                            The Mozilla Reps Companion provides easy access to tools and documentation for Mozilla Reps.
+                        </p>
+                        <p>
+                            The Mozilla Reps program aims to empower and support volunteer
+                            Mozillians who want to become official representatives of
+                            Mozilla in their region/locale.
+                        </p>
+                        <p>
+                            The program provides a simple framework and a specific set of
+                            tools to help Mozillians to organize and/or attend events,
+                            recruit and mentor new contributors, document and share
+                            activities, and support their local communities better.
 
-        <!-- Main content section -->
-        <div class="row">
-            <div class="twelve columns main-section">
+                            <ul>
+                                <li>
+                                    <i class="icon-large icon-home">
+                                    </i><a target="_blank" href="http://reps.mozilla.org/">Mozilla Reps Website</a>
+                                </li>
+                                <li>
+                                    <i class="icon-large icon-asterisk"></i>
+                                    <a target="_blank" href="https://wiki.mozilla.org/ReMo">Mozilla Reps Wiki</a>
+                                </li>
+                                <li>
+                                    <i class="icon-large icon-twitter-sign"></i>
+                                    <a target="_blank" href="https://twitter.com/#!/mozillareps">Follow us on Twitter</a>
+                                </li>
+                            </ul>
+                        </p>
 
-                <div id="about">
-                    <h5>
-                        about:reps
-                    </h5>
-                    <br>
-                    <p style="font-weight: bold;">
-                        The Mozilla Reps Companion provides easy access to tools and documentation for Mozilla Reps.
-                    </p>
-                    <p>
-                        The Mozilla Reps program aims to empower and support volunteer
-                        Mozillians who want to become official representatives of
-                        Mozilla in their region/locale.
-                    </p>
-                    <p>
-                        The program provides a simple framework and a specific set of
-                        tools to help Mozillians to organize and/or attend events,
-                        recruit and mentor new contributors, document and share
-                        activities, and support their local communities better.
-
-                        <ul>
-                            <li>
-                                <i class="icon-large icon-home">
-                                </i><a target="_blank" href="http://reps.mozilla.org/">Mozilla Reps Website</a>
-                            </li>
-                            <li>
-                                <i class="icon-large icon-asterisk"></i>
-                                <a target="_blank" href="https://wiki.mozilla.org/ReMo">Mozilla Reps Wiki</a>
-                            </li>
-                            <li>
-                                <i class="icon-large icon-twitter-sign"></i>
-                                <a target="_blank" href="https://twitter.com/#!/mozillareps">Follow us on Twitter</a>
-                            </li>
-                        </ul>
-                    </p>
-
-                    <p>
-                        You can uninstall this add-on via the <a href="about:addons" onclick="openAddonsManager(); return false;">Add-ons Manager</a>.
-                    </p>
+                        <p>
+                            You can uninstall this add-on via the <a href="about:addons" onclick="openAddonsManager(); return false;">Add-ons Manager</a>.
+                        </p>
+                    </div>
                 </div>
+
             </div>
 
+        </div> <!-- end container div -->
+
+        <!-- Footer -->
+        <div id="footer" class="hide-on-phones">
+            <div class="row">
+                <hr />
+            </div>
+            <div id="footer-contents">
+                <img id="footer-logo" src="remo_avatar.png" alt="Reps Logo gray">
+                <p id="footer-links">
+                    This Source Code Form is subject to the terms of the Mozilla Public
+                    License, v. 2.0. You can obtain one a copy at <a target="_blank" href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>.
+                </p>
+            </div>
         </div>
 
-    </div> <!-- end container div -->
-
-    <!-- Footer -->
-    <div id="footer" class="hide-on-phones">
-        <div class="row">
-            <hr />
+        <div class="addonbarhelper">
+            <p>Access to the Mozilla Reps Companion is always available via the <span style="font-weight: bold;"/>Add-on Bar</span>. Alternatively, via the Firefox <span style="font-weight: bold;"/>'Customize...'</span> feature, you can drag it into another toolbar.</p>
+            <div class="down-triangle"> </div>
         </div>
-        <div id="footer-contents">
-            <img id="footer-logo" src="remo_avatar.png" alt="Reps Logo gray">
-            <p id="footer-links">
-                This Source Code Form is subject to the terms of the Mozilla Public
-                License, v. 2.0. You can obtain one a copy at <a target="_blank" href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>.
-            </p>
-        </div>
-    </div>
 
-    <div class="addonbarhelper">
-        <p>Access to the Mozilla Reps Companion is always available via the <span style="font-weight: bold;"/>Add-on Bar</span>. Alternatively, via the Firefox <span style="font-weight: bold;"/>'Customize...'</span> feature, you can drag it into another toolbar.</p>
-        <div class="down-triangle"> </div>
     </div>
 
 </body>
