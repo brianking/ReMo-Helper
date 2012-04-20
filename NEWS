@@ -1,0 +1,24 @@
+For a more comprehensive changelog of the latest experimental code, see:
+        https://github.com/brianking/ReMo-Helper/commits/
+
+0.3 (2012-04-19)
+ Visual:
+   - Changed look and feel to be more like reps.mozilla.org
+   - Changed order of Tabs in panel (Issue #5)
+
+ Branding:
+   - Changed all branding references to 'Mozilla Reps Companion' (Issue #6)
+
+ Tools:
+   - Point to new reporting system on reps.mozilla.org (Issue #8)
+   - Added link to event creation form (Issue #7)
+
+ Misc:
+   - When links are clicked in the panel, the panel now closes (Issue #10)
+
+0.2 (2012-04-02)
+ First preview release
+
+ General:
+   - First-run page
+   - Functional panel with feature tabs - SOPs|Montly Report|Tools|Social|About
