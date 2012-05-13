@@ -1,6 +1,20 @@
 For a more comprehensive changelog of the latest experimental code, see:
         https://github.com/brianking/ReMo-Helper/commits/
 
+1.0 (2012-05-10)
+ First ublic release
+
+ No changes
+
+1.0b1 (2012-05-04)
+ Beta release
+
+ General:
+   - General cleanup, mostly to first-run page
+
+ Reports
+   - Changed URL for submitting a report to profile page while we wait for the current report URL to be ready
+
 0.3 (2012-04-19)
  Visual:
    - Changed look and feel to be more like reps.mozilla.org
