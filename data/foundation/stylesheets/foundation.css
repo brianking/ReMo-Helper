@@ -1,4 +1,4 @@
-/* Foundation v2.2 http://foundation.zurb.com */
+/* Foundation v2.2.1 http://foundation.zurb.com */
 /* Artfully Masterminded by ZURB */
 
 /* -------------------------------------------------- 
@@ -69,9 +69,10 @@
 		border-spacing: 0;
 	}
 	
+	sub {vertical-align: sub;}
+	sup {vertical-align: super;}
 	
-	
-	body { background: #fff; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
+	body { background: #fff; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; font-size: 1.3rem; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
 	
 
 
@@ -129,6 +130,12 @@
 	.text-center { text-align: center; }
 	.hide        { display: none; }
 	.highlight   { background: #ff0; }
+	
+	#googlemap img, object, embed { max-width: none; }
+
+	#map_canvas embed { max-width: none; }
+	#map_canvas img { max-width: none; }
+	#map_canvas object { max-width: none; }
 	
 /* Artfully Masterminded by ZURB */
 
@@ -210,6 +217,7 @@
 	.column, .columns { margin-left: 4.4%; float: left; min-height: 1px; position: relative; }
 	.column:first-child, .columns:first-child { margin-left: 0; }
 	[class*="column"] + [class*="column"]:last-child { float: right; }
+	[class*="column"] + [class*="column"].end { float: left; }
 	
 	.row .one 		{ width: 4.3%; }
 	.row .two 		{ width: 13%; }
@@ -302,19 +310,19 @@
 	.block-grid>li { display: block; height: auto; float: left; }
 	
 	.block-grid.two-up { margin-left: -4% }
-	.block-grid.two-up>li { margin-left: 4%; width: 46%; }
+	.block-grid.two-up>li { margin-left: 4%; width: 46%; margin-bottom: 4%;}
 /* 	.block-grid.two-up>li:nth-child(2n+1) {clear: left;} */
 	
 	.block-grid.three-up { margin-left: -2% }
-	.block-grid.three-up>li { margin-left: 2%; width: 31.3%; }
+	.block-grid.three-up>li { margin-left: 2%; width: 31.3%; margin-bottom: 2%;}
 /* 	.block-grid.three-up>li:nth-child(3n+1) {clear: left;} */
 	
 	.block-grid.four-up { margin-left: -2% }
-	.block-grid.four-up>li { margin-left: 2%; width: 23%; }
+	.block-grid.four-up>li { margin-left: 2%; width: 23%; margin-bottom: 2%;}
 /* 	.block-grid.four-up>li:nth-child(4n+1) {clear: left;} */
 	
 	.block-grid.five-up { margin-left: -1.5% }
-	.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; }
+	.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; margin-bottom: 1.5%;}
 /* 	.block-grid.five-up>li:nth-child(5n+1) {clear: left;} */
 
 /* Artfully masterminded by ZURB  */
@@ -451,7 +459,7 @@
 	.button.disabled, .button[disabled] { opacity: 0.6; cursor: default; }
 	
 	/* Correct FF button padding */
-	@-moz-document url-prefix(http://) {
+	@-moz-document url-prefix("http://") {
 		input[type=submit].button::-moz-focus-inner, button.button::-moz-focus-inner { border: 0; padding: 0; }
 		input[type=submit].tiny.button		{ padding: 5px 14px 7px; }
 		input[type=submit].small.button		{ padding: 7px 20px 8px; }
@@ -515,7 +523,8 @@
 		.nice.tabs.vertical dd:first-child a.active { margin: 0; }
     
     ul.tabs-content { margin: 0; display: block; }
-    ul.tabs-content>li { display:none; }
+    ul.tabs-content>li { display: none; }
+    .no-js ul.tabs-content>li { display: block; }
     ul.tabs-content>li.active { display: block; }
     
     dl.contained, dl.nice.contained { margin-bottom: 0; }
@@ -545,7 +554,7 @@
 	ul.breadcrumbs li a, ul.breadcrumbs li span { text-transform: uppercase; font-size: 11px; padding-left: 12px; }
 	ul.breadcrumbs li:first-child a, ul.breadcrumbs li:first-child span { padding-left: 0; }
 	ul.breadcrumbs li:before { content: "/"; color: #aaa; }
-	ul.breadcrumbs li:first-child:before { content: ""; }
+	ul.breadcrumbs li:first-child:before { content: " "; }
 	ul.breadcrumbs li.current a { cursor: default; color: #333; }
 	ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus { text-decoration: underline; }
 	ul.breadcrumbs li.current:hover a, ul.breadcrumbs li.current a:focus { text-decoration: none; }
@@ -598,39 +607,13 @@
 /*	--------------------------------------------------
    	Sub Navs
    	http://www.zurb.com/article/292/how-to-create-simple-and-effective-sub-na
-   	
 	-------------------------------------------------- */
-
-  dl.sub-nav {
-  	display: block;
-    width: auto;
-    overflow: hidden;
-    margin: -4px 0 18px -9px;
-    padding-top: 4px;
-  }
-
-  dl.sub-nav dt, dl.sub-nav dd {
-    float: left;
-    display: inline;
-    margin-left: 9px;
-    margin-bottom: 4px;
-  }
-
-  dl.sub-nav dt {
-    color: #999;
-    font-weight: normal;
-  }
-
-  dl.sub-nav dd a {
-    text-decoration: none;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-  }
-  dl.sub-nav dd.active a {
-    background: #00A6FC;
-    color: #fff;
-    padding: 3px 9px;
-  }
+	
+	dl.sub-nav { display: block; width: auto; overflow: hidden; margin: -4px 0 18px -9px; padding-top: 4px; }
+	dl.sub-nav dt, dl.sub-nav dd { float: left; display: inline; margin-left: 9px; margin-bottom: 4px; }
+	dl.sub-nav dt { color: #999; font-weight: normal; }
+	dl.sub-nav dd a { text-decoration: none; border-radius: 12px; }
+	dl.sub-nav dd.active a { background: #00A6FC; color: #fff; padding: 3px 9px; }
 
 /*	--------------------------------------------------
    	Video
@@ -773,6 +756,7 @@
 	input.input-text, textarea { border-right: 1px solid #bbb; border-bottom: 1px solid #bbb; }
 	input.input-text, textarea, select { display: block; margin-bottom: 9px; }
 	label + input.input-text, label + textarea, label + select, label + div.dropdown, select + div.dropdown { margin-top: -9px; }
+	textarea { max-width: 100%; }
 
 	/* Text input and textarea font and padding */
 	input.input-text, textarea { font-size: 13px; padding: 4px 3px 2px; background: #fff; }
@@ -792,6 +776,12 @@
 	input.medium, textarea.medium { width: 254px; }
 	input.large, textarea.large { width: 434px; }
 	input.expand, textarea.expand { width: 100%; }
+	
+	/* Lock textareas so they can't be resized beyond their set width in webkit */
+	textarea.locked 	{ max-width: 254px; }
+    	textarea.locked.small 	{ max-width: 134px; }
+    	textarea.locked.large 	{ max-width: 434px; }
+    	textarea.locked.expand 	{ max-width: 100%; }
 
 	/* Fieldsets */
 	form fieldset { padding: 9px 9px 2px 9px; border: solid 1px #ddd; margin: 18px 0; }
@@ -848,7 +838,7 @@
 	form.custom span.custom.checkbox.checked { background-position: 0 -28px; }
 
 	form.custom div.custom.dropdown { display: block; position: relative; width: auto; height: 28px; margin-bottom: 9px; margin-top: 2px; }
-	form.custom div.custom.dropdown a.current { display: block; width: auto; line-height: 26px; min-height: 26px; padding: 0 38px 0 6px; border: solid 1px #ddd; color: #141414; background-color: #fff; }
+	form.custom div.custom.dropdown a.current { display: block; width: auto; line-height: 26px; min-height: 26px; padding: 0 38px 0 6px; border: solid 1px #ddd; color: #141414; background-color: #fff; word-wrap: nowrap; }
 	form.custom div.custom.dropdown a.selector { position: absolute; width: 26px; height: 26px; display: block; background: url(../images/misc/custom-form-sprites.png) -14px 1px no-repeat; right: 0; top: 0; border: solid 1px #ddd; }
 	form.custom div.custom.dropdown:hover a.selector,
 	form.custom div.custom.dropdown.open a.selector { background-position: -14px -26px; }
@@ -1109,6 +1099,11 @@ ul.orbit-bullets li.active {
 ul.orbit-bullets li.active.has-thumb {
     background-position: 0 0;
     border-top: 2px solid #000; }
+    
+    
+/* Correct timer in IE */
+	.timer { display: none !important; }
+	div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
 /* CSS for jQuery Reveal Plugin
  * Maintained for Foundation. foundation.zurb.com
  * Free to use under the MIT license.
@@ -1235,8 +1230,8 @@ ul.orbit-bullets li.active.has-thumb {
 		.column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
 		.column:last-child, .columns:last-child { margin-right: 0; float: none; }
 		[class*="column"] + [class*="column"]:last-child { float: none; }
-		[class*="column"]:before, [class*="column"]:after { content:""; display:table; }
-		[class*="column"]:after { clear: both; }
+		.column:before, .columns:before, .column:after, .columns:after { content:""; display:table; }
+		.column:after, .columns:after { clear: both; }
 		
 		.offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .centered { margin-left: 0 !important; }
 		
@@ -1382,6 +1377,12 @@ ul.orbit-bullets li.active.has-thumb {
 	}
 	
 	/* Nav Bar */
+
+	/* Modernizr-enabled tablet targeting */
+	@media only screen and (max-width: 1280px) and (min-width: 768px) {
+		.touch .nav-bar li a { font-size: 13px; font-size: 1.3rem; }
+		.touch .nav-bar li.has-flyout>a.flyout-toggle { padding: 20px; }
+	}
 
 	@media only screen and (max-width: 767px) {
 		.nav-bar { height: auto; }
