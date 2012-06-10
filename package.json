@@ -15,5 +15,5 @@
     "icon": "data/Remo48.png",
     "icon64": "data/Remo64.png",
     "homepage": "https://reps.mozilla.org/",
-    "dependencies": ["api-utils", "addon-kit", "vold-utils", "protocol"]
+    "dependencies": ["api-utils", "addon-kit", "protocol"]
 }

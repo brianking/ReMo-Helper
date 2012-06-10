@@ -10,15 +10,13 @@
       Mozilla Reps Companion
     </title>
 
+    <base href="{ page.baseurl }"/>
+    <link href="remo-start.css" rel="stylesheet"/>
+
     <script>
         function openAddonsManager() {
             var evt = document.createEvent("Events");
             evt.initEvent("RemoOpenAddonsManager", true, false);
-            document.dispatchEvent(evt);
-        }
-        function startAboutReps() {
-            var evt = document.createEvent("Events");
-            evt.initEvent("StartAboutReps", true, false);
             document.dispatchEvent(evt);
         }
     </script>
@@ -26,7 +24,6 @@
 </head>
 
 <body>
-    <script>startAboutReps();</script>
     <!-- Wrapper for background -->
     <div id="wrapper">
 
