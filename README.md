@@ -2,6 +2,11 @@ This is the ReMo Companion add-on. You can build it with the Add-ons SDK,
 available for download at:
 https://addons.mozilla.org/developers/builder 
 
+Install
+===========
+
+You can find a release version to install at https://addons.mozilla.org/addon/mozilla-reps-companion
+
 Source Code
 ===========
 
