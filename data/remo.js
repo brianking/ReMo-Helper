@@ -10,24 +10,24 @@ var haveSOPs = false;
 
 function parseSOPs(sops) {
   if (!sops || haveSOPs)
-  	return;
+    return;
 
   var sopsList = document.getElementById("sop-list");
   var data = sops;
-  var items = data.ask.results.items;
-  var sopCount = data.ask.results.count;
+  var items = data.query.categorymembers;
+  var sopCount = items.length;
 
-  // Log some data for number of SOPs 
+  // Log some data for number of SOPs
   console.log("# of SOPs = "+sopCount);
 
-  // Dinamically create entries for available SOPs   
-  for (var i = 0; i < parseInt(sopCount); i++) {
+  // Dynamically create entries for available SOPs
+  items.forEach(function (item) {
     var sopItem = document.createElement('li');
     var sopLink = document.createElement('a');
     var sopIcon = document.createElement('i');
-    var sopName = cleanSOPName(items[i].title.mTextform);
+    var sopName = cleanSOPName(item.title);
 
-    sopLink.href = cleanSOPUrl(items[i].uri);
+    sopLink.href = cleanSOPUrl(item.title);
     sopLink.setAttribute("target", "_blank");
 
     var liText = document.createTextNode(sopName);
@@ -37,7 +37,7 @@ function parseSOPs(sops) {
     sopItem.appendChild(sopIcon);
     sopItem.appendChild(sopLink);
     sopsList.appendChild(sopItem);
-  }
+  });
   haveSOPs = true;
 }
 
@@ -46,9 +46,7 @@ function cleanSOPName(aSOP) {
 }
 
 function cleanSOPUrl(aUrl) {
-  // e.g. https:\/\/wiki.mozilla.org\/index.php?title=ReMo\/SOPs\/Attending an Event
-  // But it works without cleanup
-  return aUrl;
+  return "https://wiki.mozilla.org/" + aUrl;
 }
 
 function handleLinkClick(event) {
