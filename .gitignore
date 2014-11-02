@@ -1,2 +1,3 @@
 *.sublime-*
 packages/
+.DS_Store
