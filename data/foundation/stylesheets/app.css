@@ -187,11 +187,16 @@ li.last {
 ----------------------------------------- */
 
 .content {
-    margin: 20px 10px 10px 10px;
+    margin: 20px 7px 10px 7px;
 }
 
 .content a {
     font-size: 16px;
+}
+
+.tabs dd a {
+    font-size: 12px;
+    padding-bottom: 10px !important;
 }
 
 .main-section {
