@@ -186,8 +186,8 @@ li.last {
    Main Page Styles
 ----------------------------------------- */
 
-.content {
-    margin: 20px 7px 10px 7px;
+#remo-main {
+    padding: 20px 7px 10px 7px;
 }
 
 .content a {
