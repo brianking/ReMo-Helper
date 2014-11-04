@@ -35,7 +35,7 @@ html {
 }
 
 body {
-    font-size: 12px;
+    font-size: 10px;
     color: rgb(51, 51, 51);
 }
 
@@ -98,6 +98,10 @@ h4 {
     letter-spacing: -0.25px;
 }
 
+ul {
+    list-style-type: none !important;  /* overwrite Foundation styling */
+}
+
 .required-field {
     color: #888;
     font-family: 'ModernPictogramsNormal';
@@ -137,7 +141,7 @@ h4 {
 }
 
 #logo-box h3 {
-    font-family: 'MetaNormal' !important;
+    font-family: 'Open Sans', sans-serif !important;
     margin-top: 5px !important;
 }
 
@@ -181,6 +185,19 @@ li.last {
 /* -----------------------------------------
    Main Page Styles
 ----------------------------------------- */
+
+#remo-main {
+    padding: 20px 7px 10px 7px;
+}
+
+.content a {
+    font-size: 16px;
+}
+
+.tabs dd a {
+    font-size: 12px;
+    padding-bottom: 10px !important;
+}
 
 .main-section {
     margin-bottom: 40px;
@@ -548,6 +565,10 @@ small.error {
     font-family: Helvetica,arial,sans-serif;
 }
 
+#about p ul {
+    list-style-type: none;
+}
+
 /* -----------------------------------------
    Featured reps Styles
 ----------------------------------------- */
@@ -760,4 +781,58 @@ ul.mreports li.editable a {
 
 .dashboard-action {
     margin: 5px 0px 20px 0px;
+}
+
+/* -------------------------------------------------- 
+    :: Mobile Visibility Affordances
+---------------------------------------------------*/
+
+.show-on-phones { display: none !important; }   
+.show-on-tablets { display: none !important; }
+.show-on-desktops { display: block !important; }
+
+.hide-on-phones { display: block !important; }  
+.hide-on-tablets { display: block !important; }
+.hide-on-desktops { display: none !important; }
+
+
+/* Modernizr-enabled tablet targeting */
+@media only screen and (max-width: 1280px) and (min-width: 768px) {
+    .touch .hide-on-phones { display: block !important; }
+    .touch .hide-on-tablets { display: none !important; }
+    .touch .hide-on-desktops { display: block !important; }
+    
+    .touch .show-on-phones { display: none !important; }
+    .touch .show-on-tablets { display: block !important; }
+    .touch .show-on-desktops { display: none !important; }
+}
+
+    
+@media only screen and (max-width: 767px) {
+    .hide-on-phones { display: none !important; }
+    .hide-on-tablets { display: block !important; }
+    .hide-on-desktops { display: block !important; }
+    
+    .show-on-phones { display: block !important; }
+    .show-on-tablets { display: none !important; }
+    .show-on-desktops { display: none !important; }
+}
+
+
+/* Specific overrides for elements that require something other than display: block */
+
+table.show-on-desktops { display: table !important; }
+table.hide-on-phones { display: table !important; } 
+table.hide-on-tablets { display: table !important; }
+
+@media only screen and (max-width: 1280px) and (min-width: 768px) {
+    .touch table.hide-on-phones { display: table !important; }
+    .touch table.hide-on-desktops { display: table !important; }
+    .touch table.show-on-tablets { display: table !important; }
+}
+
+@media only screen and (max-width: 767px) {
+    table.hide-on-tablets { display: table !important; }
+    table.hide-on-desktops { display: table !important; }
+    table.show-on-phones { display: table !important; }
 }
