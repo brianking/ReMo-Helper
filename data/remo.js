@@ -1,7 +1,7 @@
 /**
  * Remo panel script
  */
-self.on("message", function (sops) {
+self.on("message", function(sops) {
   parseSOPs(sops);
 });
 
@@ -9,8 +9,7 @@ self.on("message", function (sops) {
 var haveSOPs = false;
 
 function parseSOPs(sops) {
-  if (!sops || haveSOPs)
-    return;
+  if (!sops || haveSOPs) return;
 
   var sopsList = document.getElementById("sop-list");
   var data = sops;
@@ -21,7 +20,7 @@ function parseSOPs(sops) {
   console.log("# of SOPs = "+sopCount);
 
   // Dynamically create entries for available SOPs
-  items.forEach(function (item) {
+  items.forEach(function(item) {
     var sopItem = document.createElement("li");
     var sopLink = document.createElement("a");
     var sopIcon = document.createElement("i");
@@ -51,13 +50,13 @@ function cleanSOPUrl(aUrl) {
 
 function handleLinkClick(event) {
   var t = event.target;
-  if (t.nodeName.toLowerCase() == "a" &&
-      t.parentNode.nodeName.toLowerCase() != "dd")
-  {
+  if (t.nodeName.toLowerCase() == "a" && t.parentNode.nodeName.toLowerCase() != "dd") {
     self.port.emit("click-link", t.toString());
     event.preventDefault();
   }
 }
 
 // Send link click notifications so we can close the panel
-window.addEventListener("click", function(event) { handleLinkClick(event); } , false);
+window.addEventListener("click", function(event) {
+  handleLinkClick(event);
+}, false);
