@@ -50,13 +50,13 @@ function cleanSOPUrl(aUrl) {
 }
 
 function handleLinkClick(event) {
-      var t = event.target;
-      if (t.nodeName.toLowerCase() == 'a' &&
-          t.parentNode.nodeName.toLowerCase() != "dd")
-      {
-        self.port.emit('click-link', t.toString());
-        event.preventDefault();
-      }
+  var t = event.target;
+  if (t.nodeName.toLowerCase() == 'a' &&
+      t.parentNode.nodeName.toLowerCase() != "dd")
+  {
+    self.port.emit('click-link', t.toString());
+    event.preventDefault();
+  }
 }
 
 // Send link click notifications so we can close the panel
