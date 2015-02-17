@@ -12,11 +12,6 @@ Source Code
 
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. You can obtain one a copy at http://mozilla.org/MPL/2.0/
 
-Dependencies
-============
-The 'protocol' package is required: https://github.com/Gozala/jetpack-protocol
-Intructions for using packages: https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/adding-menus.html
-
 Icons
 =====
 Some icons via Font Awesome (http://fortawesome.github.com/Font-Awesome)
