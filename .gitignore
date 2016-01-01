@@ -1,3 +1,6 @@
 *.sublime-*
 packages/
 .DS_Store
+*.xpi
+.directory
+*~
